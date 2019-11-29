@@ -7,13 +7,13 @@
     <Vendor>Znuny GmbH</Vendor>
     <URL>http://znuny.com/</URL>
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
-    <Description Lang="en">todo.</Description>
-    <Description Lang="de">todo.</Description>
+    <Description Lang="en">Postmaster filter to prevent status change for OutOfOffice messages.</Description>
+    <Description Lang="de">Postmaster-Filter um die Statusänderung für OutOfOffice-Nachrichten zu verhindern.</Description>
     <Filelist>
         <File Permission="660" Location="Kernel/Config/Files/XML/Znuny4OTRSOutOfOfficeFilter.xml"/>
         <File Permission="660" Location="Kernel/Language/de_Znuny4OTRSOutOfOfficeFilter.pm"/>
         <File Permission="660" Location="Kernel/System/PostMaster/Filter/PreZnuny4OTRSOutOfOfficeFilter.pm"/>
-        <File Permission="660" Location="scripts/test/Znuny4OTRSOutOfOfficeFilter/PostMaster/PreZnuny4OTRSOutOfOfficeFilter.t"/>
+        <File Permission="660" Location="scripts/test/Znuny4OTRSOutOfOfficeFilter/System/PostMaster/Filter/PreZnuny4OTRSOutOfOfficeFilter.t"/>
         <File Permission="660" Location="scripts/test/Znuny4OTRSOutOfOfficeFilter/var/packagesetup/Znuny4OTRSOutOfOfficeFilter.t"/>
         <File Permission="660" Location="var/packagesetup/Znuny4OTRSOutOfOfficeFilter.pm"/>
     </Filelist>

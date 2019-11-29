@@ -11,5 +11,5 @@ mysql:
   script:
     - /run.sh
     - su -c "perl /opt/otrs/bin/otrs.Console.pl Znuny4OTRS::AdvancedPackageManager::InstallSOPM /opt/otrs/Znuny4OTRS-OutOfOfficeFilter.sopm" -s /bin/bash otrs
-    - su -c "perl /opt/otrs/bin/otrs.Console.pl Dev::UnitTest::Run --verbose --test Znuny4OTRSOutOfOfficeFilter/PostMaster/PreZnuny4OTRSOutOfOfficeFilter" -s /bin/bash otrs
+    - su -c "perl /opt/otrs/bin/otrs.Console.pl Dev::UnitTest::Run --verbose --test Znuny4OTRSOutOfOfficeFilter/System/PostMaster/Filter/PreZnuny4OTRSOutOfOfficeFilter" -s /bin/bash otrs
     - su -c "perl /opt/otrs/bin/otrs.Console.pl Dev::UnitTest::Run --verbose --test Znuny4OTRSOutOfOfficeFilter/var/packagesetup/Znuny4OTRSOutOfOfficeFilter" -s /bin/bash otrs
