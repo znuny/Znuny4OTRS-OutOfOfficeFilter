@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.0">
+    <Name>Znuny4OTRS-OutOfOfficeFilter</Name>
+    <Version>1.0.0</Version>
+    <Framework>6.0.x</Framework>
+    <PackageRequired Version="6.0.53">Znuny4OTRS-Repo</PackageRequired>
+    <Vendor>Znuny GmbH</Vendor>
+    <URL>http://znuny.com/</URL>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <Description Lang="en">todo.</Description>
+    <Description Lang="de">todo.</Description>
+    <Filelist>
+        <File Permission="660" Location="Kernel/Config/Files/XML/Znuny4OTRSOutOfOfficeFilter.xml"/>
+        <File Permission="660" Location="Kernel/Language/de_Znuny4OTRSOutOfOfficeFilter.pm"/>
+        <File Permission="660" Location="Kernel/System/PostMaster/Filter/PreZnuny4OTRSOutOfOfficeFilter.pm"/>
+        <File Permission="660" Location="scripts/test/Znuny4OTRSOutOfOfficeFilter/PostMaster/PreZnuny4OTRSOutOfOfficeFilter.t"/>
+        <File Permission="660" Location="scripts/test/Znuny4OTRSOutOfOfficeFilter/var/packagesetup/Znuny4OTRSOutOfOfficeFilter.t"/>
+        <File Permission="660" Location="var/packagesetup/Znuny4OTRSOutOfOfficeFilter.pm"/>
+    </Filelist>
+    <CodeReinstall Type="post"><![CDATA[
+        $Kernel::OM->Get('var::packagesetup::Znuny4OTRSOutOfOfficeFilter')->CodeReinstall();
+    ]]></CodeReinstall>
+    <CodeInstall Type="post"><![CDATA[
+        $Kernel::OM->Get('var::packagesetup::Znuny4OTRSOutOfOfficeFilter')->CodeInstall();
+    ]]></CodeInstall>
+    <CodeUninstall Type="pre"><![CDATA[
+        $Kernel::OM->Get('var::packagesetup::Znuny4OTRSOutOfOfficeFilter')->CodeUninstall();
+    ]]></CodeUninstall>
+    <CodeUpgrade Type="post"><![CDATA[
+        $Kernel::OM->Get('var::packagesetup::Znuny4OTRSOutOfOfficeFilter')->CodeUpgrade();
+    ]]></CodeUpgrade>
+</otrs_package>
