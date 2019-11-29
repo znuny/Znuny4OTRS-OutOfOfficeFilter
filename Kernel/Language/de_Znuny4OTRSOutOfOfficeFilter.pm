@@ -16,8 +16,8 @@ use utf8;
 sub Data {
     my $Self = shift;
 
-    $Self->{Translation}->{'Registers a PostMaster filter module that todo.'} = 'Registers a PostMaster filter module that todo.';
-    $Self->{Translation}->{'todo'} = 'todo';
+    $Self->{Translation}->{'Registers a PostMaster filter module to set the KeepStateHeader.'} = 'Registriert ein PostMaster-Filtermodul, um den KeepStateHeader zu setzen.';
+    $Self->{Translation}->{'Defines filters to set the KeepStateHeader.'} = 'Definiert Filter um den KeepStateHeader zu setzen.';
 
     return 1;
 }
