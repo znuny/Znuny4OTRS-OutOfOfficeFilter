@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<otrs_config version="2.0" init="Config">
+    <!-- nofilter(TidyAll::Plugin::OTRS::XML::Configuration::XSDValidator) -->
+    <Setting Name="PostMaster::PreFilterModule###000-Znuny4OTRSOutOfOfficeFilter" Required="0" Valid="1">
+        <Description Translatable="1">Registers a PostMaster filter module that todo.</Description>
+        <Navigation>Core::Email::PostMaster</Navigation>
+        <Value>
+            <Hash>
+                <Item Key="Module">Kernel::System::PostMaster::Filter::PreZnuny4OTRSOutOfOfficeFilter</Item>
+                <Item Key="ConfigName">
+                    <Hash>
+                        <Item Key="Key">Value</Item>
+                    </Hash>
+                </Item>
+            </Hash>
+        </Value>
+    </Setting>
+    <Setting Name="Znuny4OTRSOutOfOfficeFilter###Filter" Required="0" Valid="1">
+        <Description Translatable="1">Todo.</Description>
+        <Navigation>Core::Email::PostMaster</Navigation>
+        <Value>
+            <Array>
+                <DefaultItem>
+                    <Hash>
+                        <Item></Item>
+                    </Hash>
+                </DefaultItem>
+                <Item>
+                    <Hash>
+                        <Item Key="X-Auto-Response-Suppress">All</Item>
+                        <Item Key="X-MS-Exchange-Inbox-Rules-Loop">1</Item>
+                    </Hash>
+                </Item>
+                <Item>
+                    <Hash>
+                        <Item Key="Auto-Submitted">Vacation</Item>
+                    </Hash>
+                </Item>
+                <Item>
+                    <Hash>
+                        <Item Key="Auto-Submitted">auto-replied;\sowner-email=</Item>
+                    </Hash>
+                </Item>
+                <Item>
+                    <Hash>
+                        <Item Key="Auto-Submitted">auto-replied</Item>
+                        <Item Key="Subject">Vacation</Item>
+                    </Hash>
+                </Item>
+            </Array>
+        </Value>
+    </Setting>
+</otrs_config>
