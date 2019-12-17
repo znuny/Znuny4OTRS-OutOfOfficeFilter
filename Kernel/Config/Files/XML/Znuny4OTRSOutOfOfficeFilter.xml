@@ -7,11 +7,6 @@
         <Value>
             <Hash>
                 <Item Key="Module">Kernel::System::PostMaster::Filter::PreZnuny4OTRSOutOfOfficeFilter</Item>
-                <Item Key="ConfigName">
-                    <Hash>
-                        <Item Key="Key">Value</Item>
-                    </Hash>
-                </Item>
             </Hash>
         </Value>
     </Setting>
