@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <otrs_package version="1.0">
     <Name>Znuny4OTRS-OutOfOfficeFilter</Name>
-    <Version>1.0.0</Version>
+    <Version>6.0.1</Version>
+    <ChangeLog Version="6.0.1" Date="2020-01-03 15:34:46 +0100">Initial release.</ChangeLog>
     <Framework>6.0.x</Framework>
     <PackageRequired Version="6.0.53">Znuny4OTRS-Repo</PackageRequired>
     <Vendor>Znuny GmbH</Vendor>
