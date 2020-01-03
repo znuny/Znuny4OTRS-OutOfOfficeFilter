@@ -7,16 +7,16 @@ Definiert Filter um den KeepStateHeader zu setzen. Diese können mit weiteren He
 
 Standard-Einstellung des Filters.
 
-1.
-X-Auto-Response-Suppress       = All
-X-MS-Exchange-Inbox-Rules-Loop = 1
+**1 Filter**  
+``X-Auto-Response-Suppress       = All``  
+``X-MS-Exchange-Inbox-Rules-Loop = 1``
 
-2.
-Auto-Submitted = Vacation
+**2 Filter**  
+``Auto-Submitted = Vacation``
 
-3.
-Auto-Submitted = auto-replied;\sowner-email=
+**3 Filter**  
+``Auto-Submitted = auto-replied;\sowner-email=``
 
-4.
-Auto-Submitted = auto-replied
-Subject        = Vacation
+**4 Filter**  
+``Auto-Submitted = auto-replied``  
+``Subject        = Vacation``
