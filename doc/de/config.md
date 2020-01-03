@@ -2,7 +2,8 @@
 
 ## Filter
 `Znuny4OTRSOutOfOfficeFilter###Filter`
-Definiert Filter um den KeepStateHeader zu setzen.
+Definiert Filter um den KeepStateHeader zu setzen. Diese können mit weiteren Headern (Schlüssel) erweitert werden, der Parameter (Key) wird als RegEx interpretiert.
+
 
 Standard-Einstellung des Filters.
 
