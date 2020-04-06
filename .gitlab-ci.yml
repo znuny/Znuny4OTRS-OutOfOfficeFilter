@@ -1,15 +1,10 @@
-image: registry.znuny.com/znuny/docker-otrs6ci:latest
+image: registry.znuny.com/znuny/internal/docker-otrs6ci:$OTRS_TAG
 
-stages:
-  - test
+include:
+  - project: 'Znuny/Internal/Znuny'
+    file: '/templates/gitlab/default/.gitlab-ci-products.yml'
 
-mysql:
-  stage: test
-  services:
-    - name: registry.znuny.com/znuny/docker-mysql-utf8:latest
-      alias: mysql
-  script:
+default:
+  before_script:
     - /run.sh
-    - su -c "perl /opt/otrs/bin/otrs.Console.pl Znuny4OTRS::AdvancedPackageManager::InstallSOPM /opt/otrs/Znuny4OTRS-OutOfOfficeFilter.sopm" -s /bin/bash otrs
-    - su -c "perl /opt/otrs/bin/otrs.Console.pl Dev::UnitTest::Run --verbose --test Znuny4OTRSOutOfOfficeFilter/System/PostMaster/Filter/PreZnuny4OTRSOutOfOfficeFilter" -s /bin/bash otrs
-    - su -c "perl /opt/otrs/bin/otrs.Console.pl Dev::UnitTest::Run --verbose --test Znuny4OTRSOutOfOfficeFilter/var/packagesetup/Znuny4OTRSOutOfOfficeFilter" -s /bin/bash otrs
+    - su -c "bin/otrs.Console.pl Znuny4OTRS::AdvancedPackageManager::InstallSOPM /opt/otrs/$CI_PROJECT_NAME.sopm" - otrs
