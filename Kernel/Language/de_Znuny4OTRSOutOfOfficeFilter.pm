@@ -17,7 +17,7 @@ sub Data {
     my $Self = shift;
 
     $Self->{Translation}->{'Registers a PostMaster filter module to set the KeepStateHeader.'} = 'Registriert ein PostMaster-Filtermodul, um den KeepStateHeader zu setzen.';
-    $Self->{Translation}->{'Defines filters to set the KeepStateHeader.'} = 'Definiert Filter um den KeepStateHeader zu setzen.';
+    $Self->{Translation}->{'Defines filters to set the KeepStateHeader.'}                      = 'Definiert Filter, um den KeepStateHeader zu setzen.';
 
     return 1;
 }
