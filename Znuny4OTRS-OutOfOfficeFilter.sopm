@@ -5,7 +5,7 @@
     <ChangeLog Version="6.0.2" Date="2020-04-06 14:34:46 +0200">Open source preparations.</ChangeLog>
     <ChangeLog Version="6.0.1" Date="2020-01-03 15:34:46 +0100">Initial release.</ChangeLog>
     <Framework>6.0.x</Framework>
-    <PackageRequired Version="6.0.53">Znuny4OTRS-Repo</PackageRequired>
+    <PackageRequired Version="6.0.71">Znuny4OTRS-Repo</PackageRequired>
     <Vendor>Znuny GmbH</Vendor>
     <URL>http://znuny.com/</URL>
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
