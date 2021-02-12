@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <otrs_package version="1.0">
     <Name>Znuny4OTRS-OutOfOfficeFilter</Name>
-    <Version>6.0.2</Version>
+    <Version>6.0.3</Version>
+    <ChangeLog Version="6.0.3" Date="2021-02-12 17:39:10 +0100">Happy new year. Tidied code.</ChangeLog>
     <ChangeLog Version="6.0.2" Date="2020-04-06 14:34:46 +0200">Open source preparations.</ChangeLog>
     <ChangeLog Version="6.0.1" Date="2020-01-03 15:34:46 +0100">Initial release.</ChangeLog>
     <Framework>6.0.x</Framework>
