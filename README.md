@@ -1,6 +1,6 @@
 ![Znuny logo](https://znuny.com/assets/images/logo_small.png)
 
-![Build status](https://badge.proxy.znuny.com/Znuny4OTRS-OutOfOfficeFilter/rel-6_1)
+![Build status](https://badge.proxy.znuny.com/Znuny4OTRS-OutOfOfficeFilter/rel-6_2)
 
 Znuny-OutOfOfficeFilter
 ============================
@@ -8,11 +8,11 @@ This package prevents automatic follow ups from changing the ticket status. This
 
 **Prerequisites**
 
-- Znuny 6.1
+- Znuny 6.2
 
 **Installation**
 
-Download the [package](https://addons.znuny.com/api/addon_repos/public/2087/latest) and install it via admin interface -> package manager.
+Download the [package](https://addons.znuny.com/api/addon_repos/public/2103/latest) and install it via admin interface -> package manager.
 
 **Configuration**
 
@@ -20,7 +20,7 @@ No further configuration required.
 
 **Download**
 
-Download the [latest version](https://addons.znuny.com/api/addon_repos/public/2087/latest).
+Download the [latest version](https://addons.znuny.com/api/addon_repos/public/2103/latest).
 
 **Professional Support**
 
