@@ -1,5 +1,5 @@
 # --
-# Copyright (C) 2012-2021 Znuny GmbH, http://znuny.com/
+# Copyright (C) 2012-2022 Znuny GmbH, http://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -20,7 +20,7 @@ $Kernel::OM->ObjectParamAdd(
     },
 );
 
-my $PackageSetupObject = $Kernel::OM->Get('var::packagesetup::Znuny4OTRSOutOfOfficeFilter');
+my $PackageSetupObject = $Kernel::OM->Get('var::packagesetup::ZnunyOutOfOfficeFilter');
 
 $Self->True(
     scalar $PackageSetupObject->CodeInstall(),

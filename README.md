@@ -1,19 +1,18 @@
 ![Znuny logo](https://znuny.com/assets/images/logo_small.png)
 
-![Build status](https://badge.proxy.znuny.com/Znuny4OTRS-OutOfOfficeFilter/master)
+![Build status](https://badge.proxy.znuny.com/Znuny4OTRS-OutOfOfficeFilter/rel-6_1)
 
-Znuny4OTRS-OutOfOfficeFilter
+Znuny-OutOfOfficeFilter
 ============================
 This package prevents automatic follow ups from changing the ticket status. This can happen, for example, if an automatic out-of-office message is returned after an e-mail is sent.
 
 **Prerequisites**
 
-- OTRS 6
-- [Znuny4OTRS-Repo](https://www.znuny.com/add-ons/znuny4otrs-repository)
+- Znuny 6.1
 
 **Installation**
 
-Download the [package](https://addons.znuny.com/api/addon_repos/public/1586/latest) and install it via admin interface -> package manager or use [Znuny4OTRS-Repo](https://www.znuny.com/add-ons/znuny4otrs-repository).
+Download the [package](https://addons.znuny.com/api/addon_repos/public/2087/latest) and install it via admin interface -> package manager.
 
 **Configuration**
 
@@ -21,11 +20,11 @@ No further configuration required.
 
 **Download**
 
-Download the [latest version](https://addons.znuny.com/api/addon_repos/public/1586/latest).
+Download the [latest version](https://addons.znuny.com/api/addon_repos/public/2087/latest).
 
 **Professional Support**
 
-For this add-on and for OTRS in general visit [www.znuny.com](https://www.znuny.com). Looking forward to hear from you!
+For this add-on and for Znuny in general visit [www.znuny.com](https://www.znuny.com). Looking forward to hear from you!
 
 Enjoy!
 
