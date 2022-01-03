@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <otrs_config version="2.0" init="Config">
     <!-- nofilter(TidyAll::Plugin::OTRS::XML::Configuration::XSDValidator) -->
-    <Setting Name="PostMaster::PreFilterModule###000-Znuny4OTRSOutOfOfficeFilter" Required="0" Valid="1">
+    <Setting Name="PostMaster::PreFilterModule###000-ZnunyOutOfOfficeFilter" Required="0" Valid="1">
         <Description Translatable="1">Registers a PostMaster filter module to set the KeepStateHeader.</Description>
         <Navigation>Core::Email::PostMaster</Navigation>
         <Value>
             <Hash>
-                <Item Key="Module">Kernel::System::PostMaster::Filter::PreZnuny4OTRSOutOfOfficeFilter</Item>
+                <Item Key="Module">Kernel::System::PostMaster::Filter::PreZnunyOutOfOfficeFilter</Item>
             </Hash>
         </Value>
     </Setting>
-    <Setting Name="Znuny4OTRSOutOfOfficeFilter###Filter" Required="0" Valid="1">
+    <Setting Name="ZnunyOutOfOfficeFilter###Filter" Required="0" Valid="1">
         <Description Translatable="1">Defines filters to set the KeepStateHeader.</Description>
         <Navigation>Core::Email::PostMaster</Navigation>
         <Value>

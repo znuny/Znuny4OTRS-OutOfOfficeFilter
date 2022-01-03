@@ -1,12 +1,12 @@
 # --
-# Copyright (C) 2012-2021 Znuny GmbH, http://znuny.com/
+# Copyright (C) 2012-2022 Znuny GmbH, http://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
 # did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
-package Kernel::System::PostMaster::Filter::PreZnuny4OTRSOutOfOfficeFilter;
+package Kernel::System::PostMaster::Filter::PreZnunyOutOfOfficeFilter;
 
 use strict;
 use warnings;
@@ -47,7 +47,7 @@ sub Run {
     my $KeepStateHeader = $ConfigObject->Get('KeepStateHeader') || 'X-OTRS-FollowUp-State-Keep';
 
     # get all possible filter
-    my $FilterAttributes = $ConfigObject->Get('Znuny4OTRSOutOfOfficeFilter')->{Filter} || {};
+    my $FilterAttributes = $ConfigObject->Get('ZnunyOutOfOfficeFilter')->{Filter} || {};
 
     # use TempGetParam to lowercase all values
     my %TempGetParam = map { lc $_ => $Param{GetParam}->{$_} } keys %{ $Param{GetParam} };

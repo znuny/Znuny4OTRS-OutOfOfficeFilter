@@ -1,6 +1,6 @@
 # Konfiguration
 
-## __Znuny4OTRSOutOfOfficeFilter###Filter__
+## __ZnunyOutOfOfficeFilter###Filter__
 Definiert Filter, um den E-Mail-Header X-OTRS-FollowUp-State-Keep zu setzen. Diese können mit weiteren Headern (Schlüssel) erweitert werden. Der Parameter (Inhalt) wird als regulärer Ausdruck interpretiert.
 
 ### Standard-Einstellungen des Filters

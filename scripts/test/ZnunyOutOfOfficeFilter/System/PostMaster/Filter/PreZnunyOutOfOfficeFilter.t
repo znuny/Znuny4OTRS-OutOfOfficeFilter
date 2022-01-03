@@ -1,5 +1,5 @@
 # --
-# Copyright (C) 2012-2021 Znuny GmbH, http://znuny.com/
+# Copyright (C) 2012-2022 Znuny GmbH, http://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
 # the enclosed file COPYING for license information (AGPL). If you
@@ -50,7 +50,7 @@ Subject: $Subject X-Auto-Response-Suppress and X-MS-Exchange-Inbox-Rules-Loop
 X-Auto-Response-Suppress: All
 X-MS-Exchange-Inbox-Rules-Loop: 123
 
-Znuny4OTRS-OutOfOfficeFilter Content
+Znuny-OutOfOfficeFilter Content
 EOF
         },
         ExpectedResult => {
@@ -67,7 +67,7 @@ To: Znuny <info\@znuny.de>
 Subject: $Subject Auto-Submitted - Vacation
 Auto-Submitted: Vacation
 
-Znuny4OTRS-OutOfOfficeFilter Content
+Znuny-OutOfOfficeFilter Content
 EOF
         },
         ExpectedResult => {
@@ -84,7 +84,7 @@ To: Znuny <info\@znuny.de>
 Subject: $Subject
 Auto-Submitted: auto-replied; owner-email=
 
-Znuny4OTRS-OutOfOfficeFilter Content
+Znuny-OutOfOfficeFilter Content
 EOF
         },
         ExpectedResult => {
@@ -101,7 +101,7 @@ To: Znuny <info\@znuny.de>
 Subject: $Subject Vacation
 Auto-Submitted: auto-replied
 
-Znuny4OTRS-OutOfOfficeFilter Content
+Znuny-OutOfOfficeFilter Content
 EOF
         },
         ExpectedResult => {
@@ -117,7 +117,7 @@ From: Znuny <info\@znuny.de>
 To: Znuny <info\@znuny.de>
 Subject: $Subject
 
-Znuny4OTRS-OutOfOfficeFilter Content
+Znuny-OutOfOfficeFilter Content
 EOF
         },
         ExpectedResult => {
