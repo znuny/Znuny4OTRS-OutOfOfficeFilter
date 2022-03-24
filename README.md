@@ -12,7 +12,7 @@ This package prevents automatic follow ups from changing the ticket status. This
 
 **Installation**
 
-UUse the online repository or download the [package](https://addons.znuny.com/api/addon_repos/public/2195/latest) and install it via admin interface -> package manager.
+Use the online repository or download the [package](https://addons.znuny.com/api/addon_repos/public/2195/latest) and install it via admin interface -> package manager.
 
 **Configuration**
 
