@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <otrs_config version="2.0" init="Config">
-    <!-- nofilter(TidyAll::Plugin::OTRS::XML::Configuration::XSDValidator) -->
+    <!-- nofilter(TidyAll::Plugin::Znuny::XML::Configuration::XSDValidator) -->
     <Setting Name="PostMaster::PreFilterModule###000-ZnunyOutOfOfficeFilter" Required="0" Valid="1">
         <Description Translatable="1">Registers a PostMaster filter module to set the KeepStateHeader.</Description>
         <Navigation>Core::Email::PostMaster</Navigation>

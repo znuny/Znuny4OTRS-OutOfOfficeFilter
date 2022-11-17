@@ -2,6 +2,12 @@
 <otrs_package version="1.0">
     <Name>Znuny-OutOfOfficeFilter</Name>
     <Version>6.4.1</Version>
+    <Framework>6.4.x</Framework>
+    <Vendor>Znuny GmbH</Vendor>
+    <URL>http://znuny.com/</URL>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <Description Lang="en">PostMaster filter to prevent ticket status changes by out-of-office messages.</Description>
+    <Description Lang="de">PostMaster-Filter, um Ticketstatusänderungen durch Out-Of-Office-Nachrichten zu verhindern.</Description>
     <ChangeLog Version="6.4.1" Date="2022-07-27 22:20:31 +0200">initial release for Znuny 6.4</ChangeLog>
     <ChangeLog Version="6.3.2" Date="2022-06-10 11:09:37 +0200">Fixed SysConfig migration in package setup.</ChangeLog>
     <ChangeLog Version="6.3.1" Date="2022-03-17 19:22:57 +0100">Ported to Znuny 6.3</ChangeLog>
@@ -10,12 +16,6 @@
     <ChangeLog Version="6.0.3" Date="2021-02-12 17:39:10 +0100">Happy new year. Tidied code.</ChangeLog>
     <ChangeLog Version="6.0.2" Date="2020-04-06 14:34:46 +0200">Open source preparations.</ChangeLog>
     <ChangeLog Version="6.0.1" Date="2020-01-03 15:34:46 +0100">Initial release.</ChangeLog>
-    <Framework>6.4.x</Framework>
-    <Vendor>Znuny GmbH</Vendor>
-    <URL>http://znuny.com/</URL>
-    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
-    <Description Lang="en">PostMaster filter to prevent ticket status changes by out-of-office messages.</Description>
-    <Description Lang="de">PostMaster-Filter, um Ticketstatusänderungen durch Out-Of-Office-Nachrichten zu verhindern.</Description>
     <Filelist>
         <File Permission="660" Location="Kernel/Config/Files/XML/ZnunyOutOfOfficeFilter.xml"/>
         <File Permission="660" Location="Kernel/Language/de_ZnunyOutOfOfficeFilter.pm"/>
