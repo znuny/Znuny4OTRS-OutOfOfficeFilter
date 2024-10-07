@@ -27,6 +27,9 @@ sub new {
 
     $Self->{Debug} = $Param{Debug} || 0;
 
+    # Get communication log object.
+    $Self->{CommunicationLogObject} = $Param{CommunicationLogObject} || die "Got no CommunicationLogObject!";
+
     # Default Settings
     $Self->{Config} = {};
 
@@ -55,6 +58,8 @@ sub Run {
     FILTER:
     for my $Filter ( @{$FilterAttributes} ) {
 
+        my $MatchedAttribute;
+        my $MatchedRegEx;
         for my $Attribute ( sort keys %{$Filter} ) {
 
             my $AttributeLC = lc($Attribute);
@@ -69,9 +74,29 @@ sub Run {
                 # check header value via regex
                 next FILTER if $TempGetParam{$AttributeLC} !~ m{$RegEx}i;
             }
+
+            $MatchedAttribute = $AttributeLC;
+            $MatchedRegEx     = $RegEx;
         }
 
         $Param{GetParam}->{$KeepStateHeader} = 1;
+
+        $Self->{CommunicationLogObject}->ObjectLog(
+            ObjectLogType => 'Message',
+            Priority      => 'Debug',
+            Key           => 'Kernel::System::PostMaster::Filter::PreZnunyOutOfOfficeFilter',
+            Value => "KeepStateHeader $KeepStateHeader was set. Attribute: $MatchedAttribute | RegEx: $MatchedRegEx",
+        );
+    }
+
+    # All filters have been checked.
+    if ( @{$FilterAttributes} ) {
+        $Self->{CommunicationLogObject}->ObjectLog(
+            ObjectLogType => 'Message',
+            Priority      => 'Debug',
+            Key           => 'Kernel::System::PostMaster::Filter::PreZnunyOutOfOfficeFilter',
+            Value         => "All filters have been checked.",
+        );
     }
 
     return 1;
