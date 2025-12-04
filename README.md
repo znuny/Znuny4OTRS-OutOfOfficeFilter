@@ -1,6 +1,6 @@
 ![Znuny logo](https://znuny.com/assets/images/logo_small.png)
 
-![Build status](https://badge.proxy.znuny.com/Znuny4OTRS-OutOfOfficeFilter/rel-7_2)
+![Build status](https://badge.proxy.znuny.com/Znuny4OTRS-OutOfOfficeFilter/rel-7_3)
 
 Znuny-OutOfOfficeFilter
 ============================
@@ -8,7 +8,7 @@ This package prevents automatic follow ups from changing the ticket status. This
 
 **Prerequisites**
 
-- Znuny 7.2
+- Znuny 7.3
 
 **Installation**
 
