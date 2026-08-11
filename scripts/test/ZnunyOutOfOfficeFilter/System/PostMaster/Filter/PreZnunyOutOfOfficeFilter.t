@@ -11,7 +11,7 @@ use warnings;
 use utf8;
 
 use vars (qw($Self));
-
+use Kernel::System::PostMaster;
 use Kernel::System::VariableCheck qw(:all);
 
 $Kernel::OM->ObjectParamAdd(
@@ -25,8 +25,27 @@ my $HelperObject        = $Kernel::OM->Get('Kernel::System::UnitTest::Helper');
 my $UnitTestEmailObject = $Kernel::OM->Get('Kernel::System::UnitTest::Email');
 my $TicketObject        = $Kernel::OM->Get('Kernel::System::Ticket');
 
+# The additional headers of this package are only scanned by the PostMaster if they are
+# part of PostmasterX-Header. This is done by the package setup, which might not have run yet.
+my @PostmasterXHeaders     = @{ $ConfigObject->Get('PostmasterX-Header') };
+my %PostmasterXHeaderAdded = map { $_ => 1 } @PostmasterXHeaders;
+
+HEADER:
+for my $Header ( 'X-Auto-Response-Suppress', 'X-MS-Exchange-Inbox-Rules-Loop' ) {
+    next HEADER if $PostmasterXHeaderAdded{$Header};
+    push @PostmasterXHeaders, $Header;
+}
+
+$HelperObject->ConfigSettingChange(
+    Valid => 1,
+    Key   => 'PostmasterX-Header',
+    Value => \@PostmasterXHeaders,
+);
+
+my $InitialState = 'closed successful';
+
 my $TicketID = $HelperObject->TicketCreate(
-    State => 'closed successful',
+    State => $InitialState,
 );
 
 my %Ticket = $TicketObject->TicketGet(
@@ -59,7 +78,7 @@ EOF
         },
     },
     {
-        Name => 'X-Auto-Response-Suppress and X-MS-Exchange-Inbox-Rules-L',
+        Name => 'Auto-Submitted Vacation',
         Data => {
             Email => <<EOF,
 From: Znuny <info\@znuny.de>
@@ -137,6 +156,19 @@ for my $Test (@Tests) {
         "Start Test: $Test->{Name}",
     );
 
+    # Every test needs the same starting point because a previous follow-up might have
+    # changed the state of the ticket.
+    my $StateSet = $TicketObject->TicketStateSet(
+        TicketID => $TicketID,
+        State    => $InitialState,
+        UserID   => 1,
+    );
+
+    $Self->True(
+        $StateSet,
+        "$Test->{Name} - Ticket state reset to '$InitialState'",
+    );
+
     my $CommunicationLogObject = $Kernel::OM->Create(
         'Kernel::System::CommunicationLog',
         ObjectParams => {
@@ -153,14 +185,14 @@ for my $Test (@Tests) {
 
     my @Result = $PostMasterObject->Run();
 
-    my $TicketID = $Result[1];
+    my $FollowUpTicketID = $Result[1];
 
     # new/clear ticket object
     $Kernel::OM->ObjectsDiscard( Objects => ['Kernel::System::Ticket'] );
-    my $TicketObject = $Kernel::OM->Get('Kernel::System::Ticket');
+    $TicketObject = $Kernel::OM->Get('Kernel::System::Ticket');
 
     my %Ticket = $TicketObject->TicketGet(
-        TicketID => $TicketID,
+        TicketID => $FollowUpTicketID,
     );
 
     $Self->Is(
